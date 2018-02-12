@@ -1,3 +1,32 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	background-color: #e9ddb9;
+}
+
+.malus-crest {
+	background-image: image-url('malus_crest_small.png');
+	background-repeat: no-repeat;
+	width:350px;
+	height:300px;
+	position: fixed;
+	left: 50%;
+	top: 300px;
+	margin-left: -175px;
+}
+.malus-tree-left, .malus-tree-right {
+	background-repeat: no-repeat;
+	width:800px;
+	height:1200px;
+	position: fixed;
+}
+.malus-tree-left {
+	background-image: image-url('malus_tree_left_small.png');
+	left:0px;
+}
+.malus-tree-right {
+	background-image: image-url('malus_tree_right_small.png');
+	right:0px;
+}
