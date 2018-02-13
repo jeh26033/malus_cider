@@ -4,8 +4,9 @@
     
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "application.scss.css" %>
- 	<title><%= yield(:title) %> | Malus Cider</title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
+ 	  <title><%= yield(:title) %> | Malus Cider</title>
+   
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald:700" rel="stylesheet">
   	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -15,8 +16,10 @@
   </head>
 
   <body>
-  	<%= render 'layouts/header' %>
-    <%= yield %>
-    <%= render 'layouts/footer' %>
+    <div class="jumbotron">
+    	<%= render 'layouts/header' %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
   </body>
 </html>
