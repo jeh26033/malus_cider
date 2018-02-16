@@ -34,7 +34,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'stripe' 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem "figaro"
 
 group :development, :test do
    gem 'sqlite3', '1.3.13'
