@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'articles/new'
+
+  get 'articles/create'
+
+  get 'articles/index'
+
   root 'static_pages#home'
 
   get '/store', to: 'static_pages#store'
@@ -8,6 +14,10 @@ Rails.application.routes.draw do
   get '/blog', to: 'static_pages#blog'
 
   get '/contact', to: 'static_pages#contact'
+
+  resources :charges
+
+  get '/new', to: 'charges#new'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

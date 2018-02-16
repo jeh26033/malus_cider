@@ -34,6 +34,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'stripe' 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem "figaro"
+
 
 group :development, :test do
    gem 'sqlite3', '1.3.13'
@@ -42,6 +44,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+
 end
 
 group :development do
