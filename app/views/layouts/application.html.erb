@@ -4,7 +4,7 @@
     
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "application.scss.css" %>
-    
+    <script src="https://js.stripe.com/v3/"></script>
  	  <title><%= yield(:title) %> | Malus Cider</title>
    
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -17,6 +17,7 @@
 
   <body>
     <div class="jumbotron">
+      <h1> Malus cider</h1>
     	<%= render 'layouts/header' %>
       <%= yield %>
       <%= render 'layouts/footer' %>

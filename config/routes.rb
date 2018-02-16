@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'articles/new'
+
+  get 'articles/create'
+
+  get 'articles/index'
+
   root 'static_pages#home'
 
   get '/store', to: 'static_pages#store'
