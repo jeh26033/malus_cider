@@ -10,6 +10,37 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+
+	//Stuff in here will eventually go into static_pages.js
+
+	$('.accept-button').on('click', function() {
+		$(this).parent().fadeOut();
+		$(this).parent().siblings('.age-check-overlay').fadeOut();
+		console.log('time to drink!')
+
+		$(landingPageAnimation);
+	})
+
+	var landingPageAnimation = function() {
+		$('.malus-tree-left').animate({
+			left: -200,
+		}, 2000);
+		$('.malus-tree-right').animate({
+			right: -200,
+		}, 2000);
+		$('.malus-crest').animate({
+			top: 0,
+		}, 3000);
+		$('.welcome-text').delay(1500).animate({
+			opacity: 1.0
+		}, 1000);
+	}
+	//end static_pages.js
+
+})

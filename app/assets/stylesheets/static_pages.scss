@@ -1,3 +1,78 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	background-color: #e9ddb9;
+}
+
+.malus-crest {
+	background-image: image-url('malus_crest_small.png');
+	background-repeat: no-repeat;
+	width:350px;
+	height:300px;
+	position: fixed;
+	left: 50%;
+	top: 300px;
+	margin-left: -175px;
+}
+.malus-tree-left, .malus-tree-right {
+	background-repeat: no-repeat;
+	width:800px;
+	height:1200px;
+	position: fixed;
+}
+.malus-tree-left {
+	background-image: image-url('malus_tree_left_small.png');
+	left:200px;
+}
+.malus-tree-right {
+	background-image: image-url('malus_tree_right_small.png');
+	right:200px;
+}
+
+.age-check-popup {
+	background-color: white;
+	width: 500px;
+	height: 300px;
+	border: 1px solid black;
+	position: fixed;
+	top: 350px;
+	left: 50%;
+	margin-left: -250px;
+	z-index:100;
+}
+
+.age-check-overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: rgba(0,0,0,.5);
+	width: 100%;
+	height: 100%;
+}
+
+.button	{
+	position: relative;
+	width: 80px;
+	height: 20px;
+	border: 1px solid black;
+	padding: 2px;
+	text-align: center;
+	border-radius: 4px;
+	box-shadow: 1px 1px black;
+	background-color: gray;
+
+	&:active {
+		background-color: white;
+	}
+}
+
+.welcome-text {
+	position: fixed;
+	width:400px;
+	top:400px;
+	left: 50%;
+	margin-left:-200px;
+	opacity: 0;
+}
