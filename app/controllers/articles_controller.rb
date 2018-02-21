@@ -1,31 +1,57 @@
 class ArticlesController < ApplicationController
- before_action :find_article, only: [:edit, :update, :show, :delete]
+
 
   def new
-  	@article=Article.new
+    @article=Article.new
+ 
+  end
+
+  def edit
+    @article = Article.find(params[:id])
   end
 
   def create
-  	#creates a new article
-  	@article= Article.new
 
-  	@article.save
-  	redirect_to @article
+    @article = Article.new(article_params)
+
+    if @article.save
+     
+      redirect_to @article
+    else
+      render 'new'
+    
+    end
+  end
+
+  def update
+    @article = Article.find(params[:id])
+   
+    if @article.update(article_params)
+      redirect_to @article
+    else
+      render 'edit'
+    end
   end
 
   def index
-  	@article = Article.all
+  	@articles = Article.all
   end
 
   def show
-  	#finds an article
-  	@article= Article.find(params[:id])
+    @article = Article.find(params[:id])
   end
 
-  private
+  def destroy
+    @article= Article.find(params[:id])
+    @article.destroy
 
+    redirect_to articles_path
+  end
+ 
+private
   def article_params
-  	#strong paramaters
-  	params.require(:article).permit(:title, :text)
+    params.require(:article).permit(:title, :text)
   end
+
+
 end

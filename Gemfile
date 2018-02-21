@@ -35,8 +35,7 @@ gem 'stripe'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem "figaro"
-gem 'ckeditor', '~> 4.1'
-gem 'simple_form', '~> 3.2'
+
 group :development, :test do
    gem 'sqlite3', '1.3.13'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
