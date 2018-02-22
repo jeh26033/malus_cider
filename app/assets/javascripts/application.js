@@ -40,6 +40,9 @@ $(document).ready(function() {
 		$('.welcome-text').delay(1500).animate({
 			opacity: 1.0
 		}, 1000);
+		$('.button-container').delay(1500).animate({
+			opacity: 1.0
+		}, 1000);
 	}
 	//end static_pages.js
 

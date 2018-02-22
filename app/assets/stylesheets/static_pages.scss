@@ -2,6 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$background-tan: #e9ddb9;
+$leaf-green: #a9b43f;
+$malus-red: #c2531a;
+$tree-brown: #604b33;
+
+
 body {
 	background-color: #e9ddb9;
 }
@@ -75,4 +81,33 @@ body {
 	left: 50%;
 	margin-left:-200px;
 	opacity: 0;
+}
+
+.button-container {
+	margin: 0 auto;
+	position: relative;
+	top: 600px;
+	width: 600px;
+	height: 100px;
+	opacity: 0;
+	
+}
+
+.landing-button {
+	width:108px;
+	height: 50%;
+	position: relative;
+	margin:20px 20px;
+	float:left;
+	border: 1px solid black;
+	background-color: $tree-brown;
+	box-shadow: 1px 1px black;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 5px;
+	font-weight: 700;
+
+	&:active {
+		background-color: gray;
+	}
 }
