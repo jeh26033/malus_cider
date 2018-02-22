@@ -19,7 +19,7 @@ $(document).ready(function() {
 
 	//Stuff in here will eventually go into static_pages.js
 
-	$('.accept-button').on('click', function() {
+	$('#accept-button').on('click', function() {
 		$(this).parent().fadeOut();
 		$(this).parent().siblings('.age-check-overlay').fadeOut();
 		console.log('time to drink!')

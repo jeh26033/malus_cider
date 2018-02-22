@@ -24,6 +24,23 @@ a {
 	};
 }
 
+.button	{
+	position: relative;
+	width: 150px;
+	height: 80px;
+	border: 1px solid black;
+	padding: 2px;
+	text-align: center;
+	border-radius: 4px;
+	box-shadow: 1px 1px 2px black;
+	background-color: gray;
+	margin: 0 auto;
+
+	&:active {
+		background-color: white;
+	}
+}
+
 .malus-crest {
 	background-image: image-url('malus_crest_small.png');
 	background-repeat: no-repeat;
@@ -33,6 +50,7 @@ a {
 	left: 50%;
 	top: 300px;
 	margin-left: -175px;
+	z-index: 1;
 }
 .malus-tree-left, .malus-tree-right {
 	background-repeat: no-repeat;
@@ -49,16 +67,26 @@ a {
 	right:200px;
 }
 
+
+//BELOW IS THE AGE-CHECK STYLING
+
 .age-check-popup {
 	background-color: white;
-	width: 500px;
+	width: 300px;
 	height: 300px;
 	border: 1px solid black;
-	position: fixed;
-	top: 350px;
-	left: 50%;
-	margin-left: -250px;
+	position: relative;
+	margin: 0 auto;
+	padding-top: 40px;
+	top: 250px;
 	z-index:100;
+	text-align: center;
+	border-radius: 5px;
+	box-shadow: 4px 4px 8px black;
+}
+
+.age-text {
+	margin-bottom: 20px;
 }
 
 .age-check-overlay {
@@ -68,23 +96,17 @@ a {
 	background-color: rgba(0,0,0,.5);
 	width: 100%;
 	height: 100%;
+	z-index: 2;
 }
 
-.button	{
-	position: relative;
-	width: 80px;
-	height: 20px;
-	border: 1px solid black;
-	padding: 2px;
-	text-align: center;
-	border-radius: 4px;
-	box-shadow: 1px 1px black;
-	background-color: gray;
-
-	&:active {
-		background-color: white;
-	}
+.age-button {
+	line-height: 75px;
+	margin:20px auto;
+	background-color: $malus-red;
 }
+
+
+//BELOW IS THE BUTTON STYLING
 
 .welcome-text {
 	position: fixed;
@@ -113,7 +135,7 @@ a {
 	float:left;
 	border: 1px solid black;
 	background-color: $tree-brown;
-	box-shadow: 1px 1px black;
+	box-shadow: 1px 1px 2px black;
 	text-align: center;
 	line-height: 50px;
 	border-radius: 5px;
