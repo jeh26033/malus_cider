@@ -19,7 +19,7 @@ $(document).ready(function() {
 
 	//Stuff in here will eventually go into static_pages.js
 
-	$('.accept-button').on('click', function() {
+	$('#accept-button').on('click', function() {
 		$(this).parent().fadeOut();
 		$(this).parent().siblings('.age-check-overlay').fadeOut();
 		console.log('time to drink!')
@@ -38,6 +38,9 @@ $(document).ready(function() {
 			top: 0,
 		}, 3000);
 		$('.welcome-text').delay(1500).animate({
+			opacity: 1.0
+		}, 1000);
+		$('.button-container').delay(1500).animate({
 			opacity: 1.0
 		}, 1000);
 	}
