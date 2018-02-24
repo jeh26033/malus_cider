@@ -56,7 +56,12 @@ a {
 
 .malus-crest-frame {
 	@extend .malus-crest;
-	top: 20px;
+	top: 0px;
+	background-size: 175px, 150px;
+	width: 175px;
+	height: 150px;
+	left: 54.5%;
+
 }
 .malus-tree-left, .malus-tree-right {
 	background-repeat: no-repeat;
@@ -149,10 +154,10 @@ a {
 	top: -70px;
 	opacity: 1;
 	z-index: 10;
-	width: 610px;
+	width: 750px;
 
 	.store-button {
-		margin-left: 36px;
+		margin-left: 175px;
 	}
 }
 
