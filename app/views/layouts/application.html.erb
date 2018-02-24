@@ -15,6 +15,12 @@
   </head>
 
   <body>
+    <%= puts request.fullpath %>
+    <% if request.fullpath != "/"  %>
+      <div class="malus-tree-left-frame"></div>
+      <div class="malus-tree-right-frame"></div>
+    <% end %> 
+    
     <%= yield %>
   </body>
 </html>
