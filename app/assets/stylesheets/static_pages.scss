@@ -53,6 +53,11 @@ a {
 	margin-left: -175px;
 	z-index: 1;
 }
+
+.malus-crest-frame {
+	@extend .malus-crest;
+	top: 20px;
+}
 .malus-tree-left, .malus-tree-right {
 	background-repeat: no-repeat;
 	width:800px;
@@ -137,6 +142,18 @@ a {
 	height: 100px;
 	opacity: 0;
 	
+}
+
+.button-container-nav {
+	@extend .button-container;
+	top: -70px;
+	opacity: 1;
+	z-index: 10;
+	width: 610px;
+
+	.store-button {
+		margin-left: 36px;
+	}
 }
 
 .landing-button {
