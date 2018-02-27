@@ -11,10 +11,24 @@
     <%= favicon_link_tag 'malus-apple-icon.png' %>
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald:700" rel="stylesheet">
   	<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
   </head>
 
   <body>
+    <%= puts request.fullpath %>
+    <% if request.fullpath != "/"  %>
+      <div class="malus-crest-frame"></div>
+      <div class="malus-tree-left-frame"></div>
+      <div class="malus-tree-right-frame"></div>
+      <div class="button-container-nav">
+        <%= link_to "BLOG", "/blog", :class =>"landing-button blog-button" %>
+        <%= link_to "ABOUT", "/about", :class =>"landing-button about-button" %>
+        <%= link_to "STORE", "/store", :class =>"landing-button store-button" %>
+        <%= link_to "LOCATIONS", "/contact", :class =>"landing-button contact-button" %>
+      </div>
+    <% end %> 
+    
     <%= yield %>
   </body>
 </html>

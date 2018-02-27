@@ -35,7 +35,7 @@ $(document).ready(function() {
 			right: -200,
 		}, 2000);
 		$('.malus-crest').animate({
-			top: 0,
+			top: 20,
 		}, 3000);
 		$('.welcome-text').delay(1500).animate({
 			opacity: 1.0
