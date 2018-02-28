@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
-  before_action :authenticate_user!
+  
+  before_action :authenticate_user!, :except => [:show, :index]
+
   def index #the default landing page when someone clicks blogs, shows all articles
     @articles = Article.all
   end
