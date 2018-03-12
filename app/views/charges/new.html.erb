@@ -1,11 +1,11 @@
 <!-- dynamic title-->
-<% provide(:title, "New") %>
+<% provide(:title, "Shopping") %>
 
 <h1>Buy our stuff!</h1>
 
 <div class="store-container">
-  <div class="row">
-    <div class='col-md'>
+  <div class="items-container">
+    <div class='item-row'>
       <%= form_tag charges_path do %>
         <article>
           <% if flash[:error].present? %>
@@ -19,7 +19,7 @@
           </label>
         </article>
 
-        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button store-button"
                 data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                 data-description="A month's subscription"
                 data-amount="500"
@@ -28,7 +28,7 @@
       <% end %>
     </div>
 
-    <div class='col-md'>
+    <div class='item-row'>
       <%= form_tag charges_path do %>
         <article>
           <% if flash[:error].present? %>
@@ -42,7 +42,7 @@
           </label>
         </article>
 
-        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button store-button"
                 data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                 data-description="A month's subscription"
                 data-amount="500"
@@ -50,7 +50,7 @@
        
       <% end %>
     </div>
-    <div class='col-md'>
+    <div class='item-row'>
       <%= form_tag charges_path do %>
         <article>
           <% if flash[:error].present? %>
@@ -64,7 +64,7 @@
           </label>
         </article>
 
-        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button store-button"
                 data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                 data-description="A month's subscription"
                 data-amount="500"
@@ -73,7 +73,7 @@
       <% end %>
     </div>
 
-    <div class='col-md'>
+    <div class='item-row'>
       <%= form_tag charges_path do %>
         <article>
           <% if flash[:error].present? %>
@@ -87,7 +87,7 @@
           </label>
         </article>
 
-        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button store-button"
                 data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                 data-description="A month's subscription"
                 data-amount="500"

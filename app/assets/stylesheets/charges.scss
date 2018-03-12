@@ -1,3 +1,28 @@
 // Place all the styles related to the charges controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$background-tan: #c0e2ca;
+$leaf-green: #a9b43f;
+$malus-red: #c2531a;
+$tree-brown: #604b33;
+$text-tan: #e9ddb9;
+
+.store-container {
+	width: 600px;
+	margin: 0 auto;
+
+	.item-row {
+		margin: 30px 0;
+
+		form article {
+			line-height: 24pt;
+		}
+	}
+
+	.stripe-button-el, .stripe-button-el span{
+		background-color: $tree-brown;
+		color: $text-tan;
+		background-image: none;
+	}
+}
