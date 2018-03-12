@@ -1,5 +1,7 @@
 {
   "name": "app",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "mapbox-gl": "^0.44.1"
+  }
 }
