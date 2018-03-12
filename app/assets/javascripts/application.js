@@ -25,6 +25,8 @@ $(document).ready(function() {
 		console.log('time to drink!')
 
 		$(landingPageAnimation);
+
+		
 	})
 
 	var landingPageAnimation = function() {

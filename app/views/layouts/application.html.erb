@@ -16,6 +16,7 @@
   </head>
 
   <body>
+
     <%= puts request.fullpath %>
     <% if request.fullpath != "/"  %>
       <div class="malus-crest-frame"></div>
@@ -30,5 +31,6 @@
     <% end %> 
     
     <%= yield %>
+
   </body>
 </html>
