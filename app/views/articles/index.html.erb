@@ -1,6 +1,6 @@
 
 <h1>Blog Entries</h1>
- 
+
 <table>
   <tr>
     <th>Title</th>
@@ -10,21 +10,29 @@
   <% @articles.each do |article| %>
     <tr>
 
-      <td>
-      	<a href= "/articles/ <%= article.id %>"<b> <%= article.title %></b> </a>
- 
-      </td>
-
+      <!-- appears for everyone -->
+      <td><a href= "/articles/ <%= article.id %>"<b> <%= article.title %></b></a></td>
       <td><%= article.text %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
-      <td><%= link_to 'Destroy', article_path(article),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %>
-      </td>
+
+      <!-- only for admins -->
+      <% if current_user.try(:admin?) %>
+        <td><%= link_to "delete", article_path(article), method: :delete,data: { confirm: "You sure?" } %> </td>
+        <td><%= link_to 'Edit', edit_article_path(article) %></td>
+      <% end %>
 
     </tr>
 
+  <% end %> <!-- end of listing loop -->
 
+ <!-- only appears to admins -->
+  <% if current_user.try(:admin?) %>
+        <%= link_to 'New article', new_article_path %>
   <% end %>
-  <%= link_to 'New article', new_article_path %>
+
 </table>
+
+
+  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
+
+  <%= link_to('Login', new_user_session_path)  %>  
+

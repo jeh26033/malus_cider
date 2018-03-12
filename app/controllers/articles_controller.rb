@@ -1,29 +1,36 @@
 class ArticlesController < ApplicationController
+  
+  before_action :authenticate_user!, :except => [:show, :index]
 
-
-  def new
-    @article=Article.new
- 
+  def index #the default landing page when someone clicks blogs, shows all articles
+    @articles = Article.all
   end
 
-  def edit
+  def show #page for one article
     @article = Article.find(params[:id])
   end
 
-  def create
 
+  
+  def new #makes a new article entry, admin
+    @article=Article.new
+  end
+
+  def edit #edits a blog, admin
+    @article = Article.find(params[:id])
+  end
+
+  def create #creates a new blog, admin
     @article = Article.new(article_params)
 
     if @article.save
-     
       redirect_to @article
     else
       render 'new'
-    
     end
   end
 
-  def update
+  def update #updates an existing article, admin
     @article = Article.find(params[:id])
    
     if @article.update(article_params)
@@ -33,18 +40,10 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def index
-  	@articles = Article.all
-  end
-
-  def show
-    @article = Article.find(params[:id])
-  end
-
-  def destroy
+  def destroy #deletes article, admin
     @article= Article.find(params[:id])
-    @article.destroy
 
+    @article.destroy
     redirect_to articles_path
   end
  
