@@ -1,3 +1,49 @@
-// Place all the styles related to the articles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$background-tan: #c0e2ca;
+$leaf-green: #a9b43f;
+$malus-red: #c2531a;
+$tree-brown: #604b33;
+$text-tan: #e9ddb9;
+
+.blog-container {
+	width: 600px;
+	margin: 0 auto;
+	margin-top: 10px;
+
+	.blogs-title {
+		font-weight: 900;
+		font-size: 28pt;
+		text-align: center;
+		line-height: 40pt;
+		margin-bottom: 50px;
+	}
+
+	.article {
+		text-align: center;
+		font-weight: 500;
+		margin-top: 30px;
+
+		.article-title {
+			font-size: 22pt;
+			line-height: 30pt;
+			width: 100%;
+		}
+
+		.article-text {
+			line-height: 18pt;
+			display: block;
+			text-align: justify;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		.read-more {
+			font-style: italic;
+			color: $malus-red;
+			text-align: center;
+			font-size: 11pt;
+			cursor: pointer;
+			width: 100px;
+			margin: 0 auto;
+		}
+	}
+}

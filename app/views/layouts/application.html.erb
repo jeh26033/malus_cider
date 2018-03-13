@@ -33,7 +33,7 @@
     <% end %> 
     
     <%= yield %>
-    <% if request.fullpath != "/about" %>
+    <% if request.fullpath == "/" or request.fullpath == "/contact" %>
       <div class="bottom-brown"></div>
     <% end %>
   </body>
