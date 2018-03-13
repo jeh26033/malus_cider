@@ -1,26 +1,41 @@
 
-<h1>Blog Entries</h1>
+<div class="about-bg" id="about-bg-2"></div>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-  </tr>
- 
+<div class="blog-container">
+  <div class="blogs-title">The Malus Cider Adventure</div>
+
+
+<!-- this is a test article -->
+  <div class="article">
+    <div class="article-title">Building a Cider House</div>
+    <div class="article-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae sagittis lorem. Pellentesque a volutpat urna. Pellentesque mauris mauris, ultricies a quam non, tincidunt facilisis erat. In ut finibus ipsum, aliquet condimentum lorem. Cras ornare porta nisi, a laoreet magna suscipit eget.
+      <div class="read-more"><a class="full-post-link">[full post]</a></div>
+    </div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">We Have A Website!</div>
+    <div class="article-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae sagittis lorem. Pellentesque a volutpat urna. Pellentesque mauris mauris, ultricies a quam non, tincidunt facilisis erat. In ut finibus ipsum, aliquet condimentum lorem. Cras ornare porta nisi, a laoreet magna suscipit eget.
+      <div class="read-more"><a class="full-post-link">[full post]</a></div>
+    </div>
+  </div>
+ <!-- end of test article -->
+
+
   <% @articles.each do |article| %>
-    <tr>
+    <div class="article">
 
       <!-- appears for everyone -->
-      <td><a href= "/articles/ <%= article.id %>"<b> <%= article.title %></b></a></td>
-      <td><%= article.text %></td>
+      <div class="article-title"><a href= "/articles/ <%= article.id %>"<b> <%= article.title %></b></a></div>
+      <div class="article-text"><%= article.text %></div>
 
       <!-- only for admins -->
       <% if current_user.try(:admin?) %>
-        <td><%= link_to "delete", article_path(article), method: :delete,data: { confirm: "You sure?" } %> </td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
+        <div><%= link_to "delete", article_path(article), method: :delete,data: { confirm: "You sure?" } %> </div>
+        <div><%= link_to 'Edit', edit_article_path(article) %></div>
       <% end %>
 
-    </tr>
+    </div>
 
   <% end %> <!-- end of listing loop -->
 
@@ -29,10 +44,11 @@
         <%= link_to 'New article', new_article_path %>
   <% end %>
 
-</table>
 
 
   <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
 
   <%= link_to('Login', new_user_session_path)  %>  
+
+</div>
 
