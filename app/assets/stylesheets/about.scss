@@ -1,0 +1,54 @@
+$background-tan: #c0e2ca;
+$leaf-green: #a9b43f;
+$malus-red: #c2531a;
+$tree-brown: #604b33;
+$text-tan: #e9ddb9;
+
+.about-container {
+	width: 600px;
+	margin: 0 auto;
+	margin-top: 40px;
+
+	.story-title {
+		font-weight: 900;
+		font-size: 22pt;
+		text-align: center;
+		line-height: 40pt;
+	}
+
+	.story-page {
+		display: inline-block;
+		margin-bottom: 40px;
+		text-align: justify;
+	}
+
+	.about-image {
+		display: inline-block;
+		width: 290px;
+		float: left;
+		margin: 0 10px 8px 0;
+		border-radius: 10px;
+	}
+
+	#story-title-2 {
+		top: 100%;
+	}
+
+	#about-image-2 {
+		float: right;
+		margin: 10px 0 0 8px;
+	}
+}
+
+.about-bg {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -2;
+	top: 100%;
+}
+
+#about-bg-2 {
+	background-color: $text-tan;
+}

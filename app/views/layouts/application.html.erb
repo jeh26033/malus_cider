@@ -33,7 +33,8 @@
     <% end %> 
     
     <%= yield %>
-
-<div class="bottom-brown"></div>
+    <% if request.fullpath != "/about" %>
+      <div class="bottom-brown"></div>
+    <% end %>
   </body>
 </html>
