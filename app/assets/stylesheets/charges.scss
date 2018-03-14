@@ -10,7 +10,7 @@ $text-tan: #e9ddb9;
 
 .store-container {
 	width: 600px;
-	margin: 0 auto;
+	margin: 0 auto; 
 
 	.item-row {
 		margin: 30px 0;
@@ -18,6 +18,13 @@ $text-tan: #e9ddb9;
 		form article {
 			line-height: 24pt;
 		}
+	}
+
+	.store-title {
+		font-size: 26pt;
+		margin: 0 auto;
+		text-align: center;
+		font-weight: 700;
 	}
 
 	.stripe-button-el, .stripe-button-el span{
