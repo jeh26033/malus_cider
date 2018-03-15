@@ -6,7 +6,7 @@
     <%= stylesheet_link_tag "application.scss.css" %>
     <script src="https://js.stripe.com/v3/"></script>
  	  <title><%= yield(:title) %> | Malus Cider</title>
-   
+    
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= favicon_link_tag 'malus-apple-icon.png' %>
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald:700" rel="stylesheet">
@@ -20,7 +20,7 @@
     <%= puts request.fullpath %>
     <% if request.fullpath != "/"  %>
       <div class="malus-crest-frame"></div>
-      <div class="malus-tree-left-frame"></div>
+     <!--<div class="malus-tree-left-frame"></div>-->
       <div class="malus-tree-right-frame"></div>
       <div class="button-container-nav">
         <%= link_to "BLOG", "/blog", :class =>"landing-button blog-button" %>

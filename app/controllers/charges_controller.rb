@@ -1,34 +1,41 @@
 class ChargesController < ApplicationController
 
 	def new
+
+	end
+
+	def show
+	end
+
+	def index
+	end
 	
-	end
-
 	def create
-		#amounts are in American cents
-		@amount=500 
-		#5 bucks
+	    # Amount in cents
 
-		#making a customer
-		customer = Stripe::Customer.create(
-			:email => params[:stripeEmail],
-			:source => params[:stripeToken]
-		)
-		#a customer has an email, and a token, provided by stripe
+	    amount = params[:stripeAmount].to_i * 100
 
-		#making a charge
-
-		charge= Stripe::Charge.create(
-			:customer    => customer.id,
-			:amount      => @amount,
-			:description => 'Rails Stripe Customer',
-			:currency 	 => 'usd'
-		)
-		# a charge has a customer, found by customer id, an amount, a description, and a currency
-		rescue Stripe::CardError => e
-		  flash[:error] = e.message
-		  redirect_to new_charge_path
-
+	    puts amount
+	 
+	    # Create the customer in Stripe
+	    customer = Stripe::Customer.create(
+	      email: params[:stripeEmail],
+	      source: params[:stripeToken]
+	      
+	    )
+	 
+	    # Create the charge using the customer data returned by Stripe API
+	    charge = Stripe::Charge.create(
+	      customer: customer.id,
+	      amount: amount,
+	      description: 'Rails Stripe customer',
+	      currency: 'usd'
+	    )		
 	end
 
+	private
+
+	  def product_params
+	    params.require(:product).permit(:id, :name, :price)
+	  end
 end

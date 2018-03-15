@@ -4,13 +4,15 @@ Rails.application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
+  resources :products
+
   resources :articles
   
   devise_for :users
 
   root 'static_pages#home'
 
-  get '/store', to: 'static_pages#store'
+  
 
   get '/about', to: 'static_pages#about'
 

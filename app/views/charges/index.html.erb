@@ -1,0 +1,65 @@
+<!--dynamic title-->
+<% provide(:title, "New") %>
+
+<h1>Buy our stuff!</h1>
+
+<div class="container">
+  <div class="row">
+
+  <% Product.all.each do |p| %>
+
+    <%= form_tag charges_path, id: 'stripeForm' do -%>
+
+      <script src="https://checkout.stripe.com/checkout.js"></script>
+
+      <%= hidden_field_tag 'stripeToken' %>
+      <%= hidden_field_tag 'stripeEmail' %>
+      <%= hidden_field_tag 'stripeAmount' %>
+
+    <p>
+      <% puts p.name %>
+        <% @price= p.price %>
+        Buy <%= p.name %> for <%= number_to_currency(@price, :unit=> '$') %>
+        <button id="<%=p.id %>">Purchase: <%=p.name%></button>
+    </p>
+  
+
+   <% end %>
+      <script>
+        <% Product.all.each do |product| %>
+         document.getElementById('<%= p.id %>').addEventListener('click', function(e) {
+          var handler = StripeCheckout.configure({
+            key: '<%= Rails.configuration.stripe[:publishable_key] %>',
+            image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+            locale: 'auto',
+            token: function(token, args) {
+              $("#stripeToken").val(token.id);
+              $("#stripeEmail").val(token.email);
+              $("#stripeAmount").val('<%= @price %>');
+              $("#stripeForm").submit();
+            }
+          });
+      
+            // Open Checkout with further options:
+           
+            handler.open({
+              name: 'Malus Cider',
+              description: '<%=p.name%>',
+              shippingAddress:true,
+              billingAddress:true,
+              amount: <%= @price %>
+            });
+            e.preventDefault();
+          });
+
+       
+          window.addEventListener('popstate', function() {
+            handler.close();
+          });
+
+    <% end %>
+</script>
+<% end %>
+
+  </div>  <!-- row-->
+</div> <!--container
