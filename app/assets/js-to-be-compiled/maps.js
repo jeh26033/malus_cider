@@ -33,10 +33,10 @@ $(document).ready(function() {
                 data: {
                   type: "FeatureCollection",
                   features:[
-                    {"type":"Feature","geometry":{"type":"Point","coordinates":[-79.74674083603814,43.22346343432551]}},
-                    {"type":"Feature","geometry":{"type":"Point","coordinates":[-80.02090,43.19975]}},
-                    {"type":"Feature","geometry":{"type":"Point","coordinates":[-79.87772,43.26277]}},
-                    {"type":"Feature","geometry":{"type":"Point","coordinates":[-79.82392,43.39297]}}
+                  //   {"type":"Feature","geometry":{"type":"Point","coordinates":[-79.74674083603814,43.22346343432551]}},
+                  //   {"type":"Feature","geometry":{"type":"Point","coordinates":[-80.02090,43.19975]}},
+                  //   {"type":"Feature","geometry":{"type":"Point","coordinates":[-79.87772,43.26277]}},
+                  //   {"type":"Feature","geometry":{"type":"Point","coordinates":[-79.82392,43.39297]}}
                   ]}
               },
               layout: {

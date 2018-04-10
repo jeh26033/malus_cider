@@ -47,3 +47,26 @@ $text-tan: #e9ddb9;
 		}
 	}
 }
+
+.blog-nav-container {
+	position: fixed;
+	left: 375px;
+	top: 395px;
+	font-size: 11pt;
+
+	.nav-header {
+		font-weight: 700;
+		font-size: 14pt;
+	}
+
+	.nav-item {
+
+		a {
+			cursor: pointer;
+
+			&:hover {
+				color: $malus-red;
+			}
+		}
+	}
+}
