@@ -89,11 +89,11 @@ a {
 	position: fixed;
 }
 .malus-tree-left {
-	background-image: image-url('malus_tree_left_small.png');
+	background-image: image-url('malus_tree_left_empty.png');
 	left:200px;
 }
 .malus-tree-right {
-	background-image: image-url('malus_tree_right_small.png');
+	background-image: image-url('malus_tree_right_empty.png');
 	right:200px;
 }
 
@@ -246,5 +246,21 @@ a {
 	svg {
 		float: right;
 		width: 10px;
+	}
+}
+
+.locations-tbd-placeholder {
+	font-weight: 700;
+	text-align: center;
+	margin-top: 100px;
+	font-size: 28pt;
+	margin-bottom: 20px;
+}
+
+.contact-us-box {
+	text-align: center;
+
+	a {
+		color: $malus-red;
 	}
 }
