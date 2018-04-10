@@ -1,6 +1,4 @@
 
-<div class="about-bg" id="about-bg-2"></div>
-
 <div class="blog-nav-container">
   <div class="nav-list">
     <div class="nav-header">Previous Chapters</div>
@@ -16,16 +14,9 @@
 
 <!-- this is a test article -->
   <div class="article">
-    <div class="article-title">Building a Cider House</div>
-    <div class="article-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae sagittis lorem. Pellentesque a volutpat urna. Pellentesque mauris mauris, ultricies a quam non, tincidunt facilisis erat. In ut finibus ipsum, aliquet condimentum lorem. Cras ornare porta nisi, a laoreet magna suscipit eget.
-      <div class="read-more"><a class="full-post-link">[full post]</a></div>
-    </div>
-  </div>
-
-  <div class="article">
-    <div class="article-title">We Have A Website!</div>
-    <div class="article-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae sagittis lorem. Pellentesque a volutpat urna. Pellentesque mauris mauris, ultricies a quam non, tincidunt facilisis erat. In ut finibus ipsum, aliquet condimentum lorem. Cras ornare porta nisi, a laoreet magna suscipit eget.
-      <div class="read-more"><a class="full-post-link">[full post]</a></div>
+    <div class="article-title">Let's Make A Toast!</div>
+    <div class="article-text">Here’s to new beginnings, new memories, and our hearts desires… we cannot forget the best part GROWTH! Thank you for embarking on this journey with us and allowing us to be a part of your adventure as well, let us know what you think. Cheers!
+    <div class="read-more"><a class="full-post-link">[full post]</a></div>
     </div>
   </div>
  <!-- end of test article -->
@@ -54,10 +45,11 @@
   <% end %>
 
 
+  <div class="blog-account-links">
+    <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
 
-  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
-
-  <%= link_to('Login', new_user_session_path)  %>  
+    <%= link_to('Login', new_user_session_path)  %> 
+  </div>  
 
 </div>
 
