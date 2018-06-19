@@ -48,10 +48,13 @@ $text-tan: #e9ddb9;
 	}
 }
 
+.blog-account-links {
+	visibility: hidden;
+}
 .blog-nav-container {
 	position: fixed;
-	left: 375px;
-	top: 395px;
+	left: 300px;
+	top: 320px;
 	font-size: 11pt;
 
 	.nav-header {

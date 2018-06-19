@@ -18,13 +18,16 @@ body {
 a {
 	text-decoration: none;
 
-	&:link {
-		color: $text-tan;
-	}
+	.tan-link{
 
-	&:visited {
-		color: $text-tan;
-	};
+		&:link {
+			color: $text-tan;
+		}
+
+		&:visited {
+			color: $text-tan;
+		};
+	}
 }
 
 .bottom-brown {
@@ -89,21 +92,23 @@ a {
 	position: fixed;
 }
 .malus-tree-left {
-	background-image: image-url('malus_tree_left_empty.png');
+	background-image: image-url('malus_tree_left_small.png');
 	left:200px;
 }
 .malus-tree-right {
-	background-image: image-url('malus_tree_right_empty.png');
+	background-image: image-url('malus_tree_right_small.png');
 	right:200px;
 }
 
 .malus-tree-left-frame {
 	@extend .malus-tree-left;
+	background-image: image-url('malus_tree_left_empty.png');
 	left: -200px;
 }
 
 .malus-tree-right-frame {
 	@extend .malus-tree-right;
+	background-image: image-url('malus_tree_right_empty.png');
 	right: -200px;
 }
 
@@ -145,13 +150,22 @@ a {
 	background-color: $malus-red;
 }
 
+.em-text {
+	color: $malus-red;
+	font-weight: 700;
+}
+
+.red-link {
+	color: $malus-red;
+	font-weight: 700;
+}
 
 //BELOW IS THE BUTTON STYLING
 
 .welcome-text {
 	position: fixed;
 	width:400px;
-	top:400px;
+	top:340px;
 	left: 50%;
 	margin-left:-200px;
 	opacity: 0;
@@ -183,7 +197,7 @@ a {
 .landing-button {
 	width:108px;
 	height: 50%;
-	color: $background-tan;
+	color: $text-tan;
 	position: relative;
 	margin:20px 20px;
 	float:left;
